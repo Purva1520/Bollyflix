@@ -1,1 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BollyFlix Dashboard</title>
+  <link rel="stylesheet" href="styledashboard.css">
+  <style>
+    body {
+      margin: 0;
+      background-color: #141414;
+      color: white;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    }
 
+    header {
+      background-color: #111;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    header h1 {
+      color: #e50914;
+      margin: 0;
+    }
+
+    .banner {
+      background-image: url('https://images.unsplash.com/photo-1542204165-65bf26472b9b');
+      background-size: cover;
+      background-position: center;
+      height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .banner h2 {
+      font-size: 36px;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .section {
+      padding: 30px;
+    }
+
+    .section h3 {
+      margin-bottom: 15px;
+    }
+
+    .movie-row {
+      display: flex;
+      gap: 15px;
+      overflow-x: auto;
+    }
+
+    .movie-card {
+      width: 200px;
+      height: 300px;
+      border-radius: 10px;
+      background-color: #222;
+      background-size: cover;
+      background-position: center;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+
+    .movie-card:hover {
+      transform: scale(1.1);
+    }
+
+    .logout-btn {
+      background: #e50914;
+      color: white;
+      padding: 8px 16px;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>BollyFlix</h1>
+    <button class="logout-btn" onclick="window.location.href='index.html'">Logout</button>
+  </header>
+
+  <div class="banner">
+    <h2>WELCOME TO BOLLYFLIX! 🎬</h2>
+  </div>
+
+  <div class="section">
+    <h3>Trending Now</h3>
+    <div class="movie-row">
+      <div class="movie-card" style="background-image: url('1.jpg');"></div>
+      <div class="movie-card" style="background-image: url('2.jpg');"></div>
+      <div class="movie-card" style="background-image: url('5.jpg');"></div>
+      <div class="movie-card" style="background-image: url('7.jpg');"></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h3>Recommended for You</h3>
+    <div class="movie-row">
+      <div class="movie-card" style="background-image: url('9.jpg');"></div>
+      <div class="movie-card" style="background-image: url('11.jpg');"></div>
+      <div class="movie-card" style="background-image: url('4.jpg');"></div>
+      <div class="movie-card" style="background-image: url('10.jpg');"></div>
+    </div>
+  </div>
+
+</body>
+</html>
