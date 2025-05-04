@@ -1,49 +1,100 @@
-<!-- about.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Us - BollyFlix</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
-    body {
-      background-color: #141414;
-      color: white;
-      font-family: 'Helvetica Neue', sans-serif;
-      padding: 40px;
+    * {
       margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
-    main {
-      max-width: 800px;
-      margin: auto;
+    
+    body {
+      background-color: #0f0f0f;
+      color: white;
+      font-family: 'Poppins', sans-serif;
     }
-    h1 {
+    
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+      padding: 40px;
+    }
+    
+    .logo {
+      font-size: 2.8em;
+      font-weight: 600;
       color: #e50914;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+    
+    .subtitle {
+      font-size: 1.3em;
+      font-weight: 300;
+      color: #f4f4f4;
       margin-bottom: 20px;
     }
-    p {
-      line-height: 1.6;
-      font-size: 1.1em;
+    
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 30px;
+      border-radius: 10px;
+      max-width: 700px;
+      box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
     }
-    a {
+    
+    .card p {
+      font-size: 1.2em;
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+    
+    .highlight {
       color: #e50914;
-      text-decoration: none;
+      font-weight: bold;
+    }
+    
+    .btn {
       display: inline-block;
-      margin-top: 20px;
-      transition: color 0.3s ease;
+      padding: 12px 24px;
+      font-size: 1em;
+      font-weight: bold;
+      background: #e50914;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: all 0.3s ease-in-out;
     }
-    a:hover {
-      text-decoration: underline;
-      color: #ff3c3c;
+    
+    .btn:hover {
+      background: #b20710;
+      transform: scale(1.05);
     }
+
   </style>
 </head>
 <body>
-  <main>
-    <h1>About BollyFlix</h1>
-    <p>BollyFlix is your go-to destination for streaming Bollywood blockbusters, timeless classics, and trending desi dramas. We bring the best of Indian cinema to your screen with a sleek, Netflix-style experience.</p>
-    <p>Built with ❤️ for Bollywood fans by Bollywood fans!</p>
-    <a href="dashboard.html">← Back to Dashboard</a>
-  </main>
+
+  <div class="container">
+    <div class="logo">BollyFlix</div>
+    <div class="subtitle">Your Ultimate Bollywood Streaming Destination</div>
+    
+    <div class="card">
+      <p>Welcome to <span class="highlight">BollyFlix</span>, the premier streaming hub for Bollywood blockbusters, timeless classics, and trending desi dramas.</p>
+      <p>Immerse yourself in the magic of Indian cinema with a sleek, <span class="highlight">Netflix-style</span> experience crafted for passionate Bollywood fans.</p>
+      <p>Built with ❤️ by Bollywood lovers, for Bollywood lovers!</p>
+      <a href="dashboard.html" class="btn">← Back to Dashboard</a>
+    </div>
+  </div>
+
 </body>
 </html>
