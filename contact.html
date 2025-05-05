@@ -6,12 +6,12 @@
   <title>Contact Us - BollyFlix</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
-    * { 
+    * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
-    
+
     body {
       background: linear-gradient(135deg, #0f0f0f, #141414);
       color: white;
@@ -26,6 +26,16 @@
       min-height: 100vh;
       text-align: center;
       padding: 40px;
+      animation: fadeInUp 1s ease-out forwards;
+      opacity: 0;
+      transform: translateY(30px);
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     h1 {
@@ -34,6 +44,7 @@
       margin-bottom: 20px;
       text-transform: uppercase;
       letter-spacing: 1px;
+      transition: color 0.3s ease;
     }
 
     .contact-form {
@@ -43,6 +54,7 @@
       max-width: 600px;
       width: 100%;
       box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
+      transition: box-shadow 0.3s ease-in-out;
     }
 
     input, textarea {
@@ -55,14 +67,22 @@
       font-family: inherit;
       background: rgba(255, 255, 255, 0.1);
       color: white;
+      transition: background 0.3s ease, transform 0.3s ease;
     }
 
-    input::placeholder, textarea::placeholder {
-      color: rgba(255, 255, 255, 0.7);
+    input:hover, textarea:hover {
+      background: rgba(255, 255, 255, 0.15);
+      transform: scale(1.01);
     }
 
     input:focus, textarea:focus {
       outline: 2px solid #e50914;
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    input::placeholder, textarea::placeholder {
+      color: rgba(255, 255, 255, 0.7);
+      transition: color 0.3s ease;
     }
 
     .btn {
@@ -95,8 +115,8 @@
     .back-link:hover {
       color: #ff3c3c;
       text-decoration: underline;
+      transform: scale(1.05);
     }
-
   </style>
 </head>
 <body>
@@ -116,3 +136,7 @@
 
 </body>
 </html>
+
+
+
+
